@@ -44,7 +44,7 @@ with cols[0]:
     st.pyplot(fig, use_container_width=True)
 
 # load some data
-pai_ready = np.load(pre_path + f'pai_ready_{s}.npy')
+pai_ready = np.load(pre_path + f'pai_ready_reduced_{s}.npy')
 
 t_coord = np.load(pre_path + f'predicted_tumour_coord_{s}.npy')
 

@@ -30,7 +30,7 @@ def plot_pai_us(pai, us, s, w, pai_log=True):
     
     if pai_log: pai = np.log(pai)
     col1, col2 = st.columns(2)
-    col1.image(pai_plot, clamp=True,use_column_width=True, caption = f"PA measurement: slice {s}, wavelength {wave} nm")
+    col1.image(pai, clamp=True,use_column_width=True, caption = f"PA measurement: slice {s}, wavelength {wave} nm")
     col2.image(us, clamp=True, use_column_width=True, caption = f"US measurement: slice {s}")
 
 # Title

@@ -24,7 +24,6 @@ st.divider()
 s = 20
 # load some data
 sand_init, sand_final = load_sand()
-pai_ready = np.load(pre_path + f'pai_ready_{s}.npy')
 
 def plot_2d(sand):
     fig, ax = plt.subplots()  

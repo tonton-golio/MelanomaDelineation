@@ -1,0 +1,7 @@
+streamlit
+matplotlib
+shapely
+scipy
+scikit-image
+opencv-python
+tqdm

@@ -1,7 +1,6 @@
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.colors import LogNorm
 from scipy import signal
 
 data_path = "./data/"
@@ -26,13 +25,12 @@ def pre_processing(path=pre_path):
 
     return us_ready, pai_ready
 
-def plot_pai_us(pai, us, s, w, pai_log=True):
+def plot_pai_us(pai, us, s, w):
     
-    if pai_log: pai = np.log(pai)
     col1, col2 = st.columns(2)
-    col1.image(pai, clamp=True,use_column_width=True, caption = f"PA measurement: slice {s}, wavelength {wave} nm")
+    col1.image(pai, clamp=True, use_column_width=True, caption = f"PA measurement: slice {s}, wavelength {wave} nm")
     col2.image(us, clamp=True, use_column_width=True, caption = f"US measurement: slice {s}")
-
+    
 # Title
 st.set_page_config(layout="wide")
 st.title('Your melanoma analysis framework')
@@ -63,8 +61,8 @@ if run or pre:
     pai, us = load_raw_data(s)
 
 if run:  
-    plot_pai_us(pai, us, s, w, True)
+    plot_pai_us(pai, us, s, w)
 
 if pre:
     us_ready, pai_ready = pre_processing()
-    plot_pai_us(pai_ready, us_ready, s, w, True)    
+    plot_pai_us(pai_ready, us_ready, s, w)    

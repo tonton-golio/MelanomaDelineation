@@ -21,7 +21,7 @@ st.set_page_config(layout="wide")
 st.subheader("The sandpiles algorithm")   
 st.divider()
 
-s = 21
+s = 20
 # load some data
 sand_init, sand_final = load_sand()
 pai_ready = np.load(pre_path + f'pai_ready_{s}.npy')

@@ -3,6 +3,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import LogNorm
 
+def repeat_values(x_reduced, repeat_factor=4):
+    return np.repeat(np.repeat(x_reduced, repeats=repeat_factor, axis=0), repeats=repeat_factor, axis=1)
+    
 # path stuff
 data_path = "./data/"
 sample_path = data_path + "your_sample/"
@@ -36,6 +39,7 @@ with cols[0]:
 # load some data
 
 pai_ready = np.load(pre_path + f'pai_ready_reduced_{s}.npy')
+pai_ready = repeat_values(pai_ready)
 t_coord = load_coord(s, 'tumour')
 h_coord = load_coord(s, 'healthy')
 

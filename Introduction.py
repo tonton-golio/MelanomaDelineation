@@ -3,7 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import LogNorm
 from scipy import signal
-import scripts.tumour_for_streamlit as t
 
 data_path = "./data/"
 sample_path = data_path + "your_sample/"

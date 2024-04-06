@@ -17,7 +17,7 @@ pre_path = "./data/pre_run/"
 thickness = np.load(pre_path + f'thickness.npy')
 
 st.set_page_config(layout="wide")
-st.subheader("Training points collection")   
+st.subheader("The predictions")   
 
 st.divider()
 

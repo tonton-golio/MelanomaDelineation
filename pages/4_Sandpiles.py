@@ -58,7 +58,6 @@ if run == True:
     st.write('3D view of the final sandpiles')
 
     sand_2 = np.load(pre_path + 'sand_castle_final.npy')
-    st.write(sand_2.shape)
     sand_2[sand_2 < -40] = -15
     x = np.arange(sand_2.shape[1])
     y = np.arange(sand_2.shape[0])

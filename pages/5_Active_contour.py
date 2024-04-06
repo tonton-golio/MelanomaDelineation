@@ -29,3 +29,4 @@ with cols_[1]:
     st.write('#')
     run = st.toggle(f'RUN', key=41)
 
+st.image('./data/qr.png')

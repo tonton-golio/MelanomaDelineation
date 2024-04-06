@@ -8,13 +8,12 @@ import plotly.graph_objs as go
 # path stuff
 data_path = "./data/"
 sample_path = data_path + "your_sample/"
-training_path = data_path + "training_data/"
 pre_path = "./data/pre_run/"
 
 @st.cache_data
 def load_sand():
-    sand_init = np.load(training_path + "sand_castle_init.npy")
-    sand_final = np.load(training_path + "sand_castle_final.npy")
+    sand_init = np.load(pre_path + "sand_castle_init.npy")
+    sand_final = np.load(pre_path + "sand_castle_final.npy")
     return sand_init, sand_final
 
 # title and layout
@@ -59,7 +58,7 @@ with cols[1]:
 if run == True:
     st.write('3D view of the final sandpiles')
 
-    sand_2 = np.load(training_path + 'sand_castle_final.npy')
+    sand_2 = np.load(pre_path + 'sand_castle_final.npy')
 
     sand_2[20][sand_2[20] < -40] = -15
     x = np.arange(sand_2[20].shape[1])

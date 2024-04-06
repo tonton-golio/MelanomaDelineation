@@ -59,12 +59,12 @@ if run == True:
 
     sand_2 = np.load(pre_path + 'sand_castle_final.npy')
 
-    sand_2[20][sand_2[20] < -40] = -15
-    x = np.arange(sand_2[20].shape[1])
-    y = np.arange(sand_2[20].shape[0])
+    sand_2[sand_2 < -40] = -15
+    x = np.arange(sand_2.shape[1])
+    y = np.arange(sand_2.shape[0])
     X, Y = np.meshgrid(x, y)
 
-    heatmap = go.Surface(x=X, y=Y, z=sand_2[20], colorscale='Viridis')
+    heatmap = go.Surface(x=X, y=Y, z=sand_2, colorscale='Viridis')
 
     layout = go.Layout(
         scene=dict(

@@ -13,8 +13,8 @@ pre_path = "./data/pre_run/"
 
 @st.cache_data
 def load_sand():
-    sand_init = np.load(training_path + "sand_castle_init.npy")[20]
-    sand_final = np.load(training_path + "sand_castle_final.npy")[20]
+    sand_init = np.load(training_path + "sand_castle_init.npy")
+    sand_final = np.load(training_path + "sand_castle_final.npy")
     return sand_init, sand_final
 
 # title and layout

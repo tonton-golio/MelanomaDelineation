@@ -34,8 +34,8 @@ with cols[0]:
         s = st.slider("Sample's cross-section:", 0, 36, key=98, value=10)
 
 # load some data
-# pai_ready = np.load(pre_path + f'pai_ready_slice{s}_channel{0}.npy')
-pai_ready = np.load(pre_path + f'pai_ready_{s}.npy')
+
+pai_ready = np.load(pre_path + f'pai_ready_reduced_{s}.npy')
 t_coord = load_coord(s, 'tumour')
 h_coord = load_coord(s, 'healthy')
 

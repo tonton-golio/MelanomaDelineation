@@ -16,7 +16,6 @@ pre_path = "./data/pre_run/"
 def load_raw_data(s, path=pre_path):
 
     pai = np.load(path + f"pai_reduced_{s}.npy")
-    pai = repeat_values(pai)
     us = np.load(path + f"us_{s}.npy")
 
     return pai, us
@@ -24,7 +23,6 @@ def load_raw_data(s, path=pre_path):
 def pre_processing(path=pre_path):
 
     pai_ready = np.load(path + f"pai_ready_reduced_{s}.npy")
-    pai_ready = repeat_values(pai_ready)
     us_ready = np.load(path + f"us_ready_{s}.npy")
     st.success('Data has been processed.')
 
@@ -63,10 +61,12 @@ with cols[1]:
 
 if run or pre:
     pai, us = load_raw_data(s)
+    pai = repeat_values(pai)
 
 if run:  
     plot_pai_us(pai, us, s, w)
 
 if pre:
     us_ready, pai_ready = pre_processing()
+    pai_ready = repeat_values(pai_ready)
     plot_pai_us(pai_ready, us_ready, s, w)    

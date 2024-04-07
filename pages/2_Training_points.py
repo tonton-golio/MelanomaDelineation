@@ -17,7 +17,7 @@ def load_coord(s, type):
 
 # title and layout
 st.set_page_config(layout="wide")
-st.subheader("Training points collection")   
+st.header("Training points collection")   
 st.divider()
 
 cols = st.columns([1, 1])

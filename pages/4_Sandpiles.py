@@ -18,7 +18,7 @@ def load_sand():
 
 # title and layout
 st.set_page_config(layout="wide")
-st.subheader("The sandpiles algorithm")   
+st.header("The sandpiles algorithm")   
 st.divider()
 
 s = 20

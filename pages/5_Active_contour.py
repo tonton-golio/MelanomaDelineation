@@ -15,7 +15,7 @@ pre_path = "./data/pre_run/"
 
 # title and layout
 st.set_page_config(layout="wide")
-st.subheader("Active contour algorithm")   
+st.header("Active contour algorithm")   
 st.divider()
 
 cols_ = st.columns([4, 1])

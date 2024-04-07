@@ -24,8 +24,8 @@ st.divider()
 cols = st.columns([1, 1])
 with cols[0]:
     """
-    This page presents the results of the 1-dimensional convolutional neural network on the spectra of each pixel.
-    The predicted tumour thickness is determined for each slice of the sample: use the slider to guide your selection of the slice to look at.
+    A 1D convolutional neural network is trained on the labelled spectra specific to the patient and used to classify each pixel in the sample. 
+    Pixels classified as tumourous are colored in red. The thickness of the tumour is calculated for each slice through an automatic algorithm. 
 
     """
 

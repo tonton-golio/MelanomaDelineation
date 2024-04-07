@@ -48,7 +48,7 @@ if run == True:
         fig, ax = plt.subplots(figsize=(5, 7))
         plt.axis('off')
         st.write('***Final tumour ouline for this slice***')
-        plt.imshow(pai_ready[:, :, 0]/pai_ready[:, :, 0].max(), cmap='gray', norm=LogNorm(clip=True), aspect='auto') 
+        plt.imshow(pai_ready[50:, :, 0]/pai_ready[50:, :, 0].max(), cmap='gray', norm=LogNorm(clip=True), aspect='auto') 
         plt.scatter(t[:, 1]//2, t[:, 0]//2, s = 0.5, color = 'orangered')
         st.pyplot(fig, use_container_width=True)
 

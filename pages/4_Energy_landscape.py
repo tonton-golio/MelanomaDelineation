@@ -37,7 +37,10 @@ def plot_2d(sand):
 cols_ = st.columns([4, 1])
 
 with cols_[0]:
-    st.write('Imagine iteratively pouring sand on each pixel proportionally to our predictions and letting it share thourgh pixels. This alllows us to create a smooth 3D energy landscape for contouring.')
+    '''To create a smooth energy landscape and integrate spatial information into our predictions,
+    we apply the "sandpiles" algorithm for an example of cross section. Imagine iteratively pouring 
+    sand on each pixel and letting it share between neighbours. Click on the RUN button to start the algorithm
+    and explore the final energy landscape.'''
 
 with cols_[1]:
     st.write('#')

@@ -31,7 +31,7 @@ colls = st.columns([2, 1])
 
 if run == True:
     with colls[0]:
-        st.video(pre_path + 'active_contour.mp4', loop = True)
+        st.image(pre_path + 'active_contour.gif')
 
     with colls[1]:
         pai_ready = np.load(pre_path + 'pai_ready_reduced_20.npy')

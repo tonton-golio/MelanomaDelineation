@@ -22,7 +22,7 @@ with cols_[0]:
 
 with cols_[1]:
     st.write('#')
-    run = st.toggle(f'RUN', key=41):
+    run = st.toggle(f'RUN', key=41)
 
 if run == True:
     st.video(pre_path + 'active_contour.mp4')

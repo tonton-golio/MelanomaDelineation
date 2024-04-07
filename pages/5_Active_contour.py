@@ -36,10 +36,11 @@ colls = st.columns(2)
 if run == True:
     with colls[0]:
         st.container()
+        st.write('#')
         st.video(pre_path + 'active_contour.mp4', loop = True)
 
     with colls[1]:
-        time.sleep(4)
+        time.sleep(6)
         pai_ready = np.load(pre_path + 'pai_ready_reduced_20.npy')
         t = np.load(pre_path + 'tumour_area.npy')
         pai_ready = repeat_values(pai_ready)

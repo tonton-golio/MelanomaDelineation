@@ -7,7 +7,7 @@ def repeat_values(x_reduced, repeat_factor=4):
     return np.repeat(np.repeat(x_reduced, repeats=repeat_factor, axis=0), repeats=repeat_factor, axis=1)
     
 # path stuff
-data_path = ".c./data/"
+data_path = "../data/"
 sample_path = data_path + "your_sample/"
 pre_path = "./data/pre_run/"
 

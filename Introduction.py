@@ -7,9 +7,11 @@ data_path = "./data/"
 sample_path = data_path + "your_sample/"
 pre_path = data_path + "pre_run/"
 
+@st.cache_data
 def repeat_values(x_reduced, repeat_factor=4):
     return np.repeat(np.repeat(x_reduced, repeats=repeat_factor, axis=0), repeats=repeat_factor, axis=1)
 
+@st.cache_data
 def plot_pai_us(pai, us, s, w):
     col1, col2 = st.columns(2)
     col1.image(np.log(pai[:, :, w])/np.log(pai[:, :, w]).max(), clamp=True, use_column_width=True, caption = f"PA measurement: slice {s}, wavelength {wave} nm")

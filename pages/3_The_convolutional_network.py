@@ -29,7 +29,7 @@ with cols[0]:
 
     """
 
-    if st.toggle(f'Go to slice where tumour is the thickest: **{round(max(thickness),2)} mm**', key=1, use_container_width=True):   # set to toggle deepest point
+    if st.toggle(f'Go to slice where tumour is the thickest: :red[**{round(max(thickness),2)} mm**]', key=1):   # set to toggle deepest point
         s = np.argmax(thickness)
     else:     
         s = st.slider("Sample's cross-section:", 0, 36, key=3, value=10)

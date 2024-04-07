@@ -44,6 +44,7 @@ with cols[1]:
 if run or pre:
     pai = np.load(pre_path + f"pai_reduced_{s}.npy")
     pai = repeat_values(pai)
+    st.write(pai[:, :, 0])
     us = np.load(pre_path + f"us_{s}.npy")
 
 if run:  

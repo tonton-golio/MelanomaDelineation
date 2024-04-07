@@ -50,7 +50,7 @@ if run == True:
     with colls[0]:
         st.container()
         st.write('#')
-        st.video(pre_path + 'active_contour.mp4', loop = True)
+        st.video(pre_path + 'active_contour.mp4')
 
     with colls[1]:
         time.sleep(6)

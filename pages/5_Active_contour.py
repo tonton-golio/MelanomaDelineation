@@ -28,7 +28,7 @@ colls = st.columns([2, 1])
 
 if run == True:
     with colls[0]:
-        st.video(pre_path + 'active_contour.mp4')
+        st.video(pre_path + 'active_contour.mp4', loop = True)
 
     with colls[1]:
         st.write('#')

@@ -39,8 +39,8 @@ cols_ = st.columns([4, 1])
 with cols_[0]:
     '''To create a smooth energy landscape and integrate spatial information into our predictions,
     we apply the "sandpiles" algorithm for an example of cross section. Imagine iteratively pouring 
-    sand on each pixel and letting it share between neighbours. Click on the RUN button to start the algorithm
-    and explore the final energy landscape.'''
+    sand on each pixel and letting it share between neighbours, with finite sinks to build a steady state.
+    Click on the RUN button to start the algorithm and explore the final energy landscape.'''
 
 with cols_[1]:
     st.write('#')

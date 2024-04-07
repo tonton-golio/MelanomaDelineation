@@ -65,7 +65,7 @@ with cols[0]:
     ax.axvline(x=s, color='r', linestyle='--', label='Selected slice')
     plt.legend(loc='upper left')
     plt.grid()
-    plt.title('Tumour thickness')
+    plt.title('Tumour thickness across slices')
     plt.xlabel('Slice')
     plt.ylabel('Thickness [mm]')
     st.pyplot(fig, use_container_width=True)

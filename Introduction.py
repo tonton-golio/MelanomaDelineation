@@ -8,9 +8,11 @@ sample_path = data_path + "your_sample/"
 training_path = data_path + "training_data/"
 pre_path = "./data/pre_run/"
 
+@st.cache_data
 def repeat_values(x_reduced, repeat_factor=4):
     return np.repeat(np.repeat(x_reduced, repeats=repeat_factor, axis=0), repeats=repeat_factor, axis=1)
 
+@st.cache_data
 def plot_pai_us(pai, us, s, w):
     col1, col2 = st.columns(2)
     col1.image(pai[:, :, w], clamp=True, use_column_width=True, caption = f"PA measurement: slice {s}, wavelength {wave} nm")

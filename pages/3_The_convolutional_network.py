@@ -35,16 +35,6 @@ with cols[0]:
         s = st.slider("Sample's cross-section:", 0, 36, key=3, value=10)
 
 
-    fig, ax = plt.subplots(figsize=(6, 1))
-    ax.plot(thickness)
-    ax.axvline(x=s, color='r', linestyle='--', label='Selected slice')
-    plt.legend(loc='upper left')
-    plt.grid()
-    plt.title('Tumour thickness')
-    plt.xlabel('Slice')
-    plt.ylabel('Thickness [mm]')
-    st.pyplot(fig, use_container_width=True)
-
 # load some data
 pai_ready = np.load(pre_path + f'pai_ready_reduced_{s}.npy')
 pai_ready = repeat_values(pai_ready)
@@ -59,5 +49,23 @@ with cols[1]:
 
     plt.legend(markerscale=15)
     if t_coord.size == 0:
-        st.write('##### No tumour pixels here, try changing slice!')
+        with cols[0]:
+            st.write('##### No tumour pixels here, try changing slice!')
+            st.write('#')
+    else:
+        with cols[0]:
+            st.write('#')
+            st.write('#')
+            
+    st.pyplot(fig, use_container_width=True)
+
+with cols[0]:
+    fig, ax = plt.subplots(figsize=(6, 1))
+    ax.plot(thickness)
+    ax.axvline(x=s, color='r', linestyle='--', label='Selected slice')
+    plt.legend(loc='upper left')
+    plt.grid()
+    plt.title('Tumour thickness')
+    plt.xlabel('Slice')
+    plt.ylabel('Thickness [mm]')
     st.pyplot(fig, use_container_width=True)

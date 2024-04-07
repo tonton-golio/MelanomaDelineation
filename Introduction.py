@@ -11,8 +11,6 @@ sample_path = data_path + "your_sample/"
 training_path = data_path + "training_data/"
 pre_path = "./data/pre_run/"
 
-@st.cache_data
-
 def load_raw_data(s, path=pre_path):
 
     pai = np.load(path + f"pai_reduced_{s}.npy")

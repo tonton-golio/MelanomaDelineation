@@ -29,7 +29,7 @@ with cols[0]:
 
     """
 
-    if st.toggle(f'Deepest point: **{round(max(thickness),2)} mm**', key=1):   # set to toggle deepest point
+    if st.button(f'GO to thickest point: **{round(max(thickness),2)} mm**', key=1):   # set to toggle deepest point
         s = np.argmax(thickness)
     else:     
         s = st.slider("Sample's cross-section:", 0, 36, key=3, value=10)

@@ -12,7 +12,7 @@ def repeat_values(x_reduced, repeat_factor=4):
 
 def plot_pai_us(pai, us, s, w):
     col1, col2 = st.columns(2)
-    col1.image(np.log(pai[:, :, w]), clamp=True, use_column_width=True, caption = f"PA measurement: slice {s}, wavelength {wave} nm")
+    col1.image(np.log(pai[:, :, w])/np.log(pai[:, :, w]).max(), clamp=False, use_column_width=True, caption = f"PA measurement: slice {s}, wavelength {wave} nm")
     col2.image(us, clamp=True, use_column_width=True, caption = f"US measurement: slice {s}")
     
 # Title

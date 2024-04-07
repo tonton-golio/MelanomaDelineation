@@ -31,7 +31,7 @@ with cols_[1]:
     st.write('#')
     run = st.toggle(f'RUN', key=41)
 
-colls = st.columns([3, 2])
+colls = st.columns(2)
 
 if run == True:
     with colls[0]:

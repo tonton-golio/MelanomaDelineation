@@ -37,7 +37,6 @@ if run == True:
     with colls[0]:
         st.container()
         st.write('#')
-        st.write('#')
         st.video(pre_path + 'active_contour.mp4', loop = True)
 
     with colls[1]:

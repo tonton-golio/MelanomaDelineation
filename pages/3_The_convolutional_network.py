@@ -29,7 +29,7 @@ with cols[0]:
 
     """
 
-    if st.toggle(f'Go to slice where tumour is the thickest: :red[**{round(max(thickness),2)} mm**]', key=1):   # set to toggle deepest point
+    if st.toggle(f'Go to slice where tumour is the thickest', key=1):   # set to toggle deepest point
         s = np.argmax(thickness)
     else:     
         s = st.slider("Sample's cross-section:", 0, 36, key=3, value=10)
@@ -69,3 +69,5 @@ with cols[0]:
     plt.xlabel('Slice')
     plt.ylabel('Thickness [mm]')
     st.pyplot(fig, use_container_width=True)
+
+    st.subheader('Melanomas thickness: :red[**{round(max(thickness),2)} mm**])

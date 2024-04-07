@@ -26,7 +26,7 @@ with ccols[0]:
     This webapp presents a clearer overview of the processing framework step by step, allowing the user to interact with the sample and fully understand my algorithm.
     """
 with ccols[1]:
-    st.image('./data/set-up.png')
+    st.image('./data/setup.png')
 
 with st.sidebar:
     "Select a sample to process and find out how deep is the tumour!"

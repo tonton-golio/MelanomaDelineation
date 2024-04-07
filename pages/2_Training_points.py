@@ -76,7 +76,9 @@ with cols[1]:
     plt.legend(markers, ['Non-healthy cluster', 'Healthy cluster'], numpoints=1, loc='upper right', markerscale=1)
     if t_coord.size == 0:
         with cols[0]:
-            st.markdown(':red[Only healthy pixels here, try changing slice!]')
+            sub_cols = st.columns([1, 8, 1])
+            with sub_cols[1]:
+                st.markdown(':red[Only healthy pixels here, try changing slice!]')
             st.write('#')
     else:
         with cols[0]:

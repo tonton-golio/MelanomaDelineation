@@ -70,6 +70,4 @@ with cols[0]:
     plt.ylabel('Thickness [mm]')
     st.pyplot(fig, use_container_width=True)
 
-    sub_cols = st.columns([1, 10, 1])
-    with sub_cols[1]:
-        st.subheader(f'Largest melanomas thickness: :red[**{round(max(thickness),2)} mm**]')
+    st.subheader(f'Largest melanomas thickness: :red[**{round(max(thickness),2)} mm**, slice 20]')

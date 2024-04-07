@@ -2,31 +2,14 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import signal
-
-def repeat_values(x_reduced, repeat_factor=4):
-    return np.repeat(np.repeat(x_reduced, repeats=repeat_factor, axis=0), repeats=repeat_factor, axis=1)
     
 data_path = "./data/"
 sample_path = data_path + "your_sample/"
 training_path = data_path + "training_data/"
 pre_path = "./data/pre_run/"
 
-def load_raw_data(s, path=pre_path):
-
-    pai = np.load(path + f"pai_reduced_{s}.npy")
-    pai = repeat_values(pai)
-    us = np.load(path + f"us_{s}.npy")
-
-    return pai, us
-
-def pre_processing(path=pre_path):
-
-    pai_ready = np.load(path + f"pai_ready_reduced_{s}.npy")
-    pai_ready = repeat_values(pai_ready)
-    us_ready = np.load(path + f"us_ready_{s}.npy")
-    st.success('Data has been processed.')
-
-    return us_ready, pai_ready
+def repeat_values(x_reduced, repeat_factor=4):
+    return np.repeat(np.repeat(x_reduced, repeats=repeat_factor, axis=0), repeats=repeat_factor, axis=1)
 
 def plot_pai_us(pai, us, s, w):
     col1, col2 = st.columns(2)
@@ -60,11 +43,16 @@ with cols[1]:
     pre = st.toggle("Pre-process data", key=4) 
 
 if run or pre:
-    pai, us = load_raw_data(s)
+    pai = np.load(path + f"pai_reduced_{s}.npy")
+    pai = repeat_values(pai)
+    us = np.load(path + f"us_{s}.npy")
 
 if run:  
     plot_pai_us(pai, us, s, w)
 
 if pre:
-    us_ready, pai_ready = pre_processing()
+    pai_ready = np.load(path + f"pai_ready_reduced_{s}.npy")
+    pai_ready = repeat_values(pai_ready)
+    us_ready = np.load(path + f"us_ready_{s}.npy")
+    st.success('Data has been processed.')
     plot_pai_us(pai_ready, us_ready, s, w)    

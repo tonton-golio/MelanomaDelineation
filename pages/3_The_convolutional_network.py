@@ -50,13 +50,13 @@ with cols[1]:
     plt.legend(markerscale=15)
     if t_coord.size == 0:
         with cols[0]:
-            st.write('##### No tumour pixels here, try changing slice!')
+            st.markdown(':red[Only healthy pixels here, try changing slice!]')
             st.write('#')
     else:
         with cols[0]:
             st.write('#')
             st.write('#')
-            
+
     st.pyplot(fig, use_container_width=True)
 
 with cols[0]:

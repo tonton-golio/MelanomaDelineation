@@ -19,7 +19,7 @@ def plot_pai_us(pai, us, s, w):
 st.set_page_config(layout="wide")
 st.title('Your melanoma analysis framework')
 
-ccols = st.columns([2, 1])
+ccols = st.columns([3, 1])
 
 with ccols[0]:
     """

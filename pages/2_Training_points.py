@@ -24,13 +24,9 @@ cols = st.columns([1, 1])
 thickness = np.load(pre_path + f'thickness.npy')
 with cols[0]:
     """ 
-    The training data for the convolutional neural network is systematically collected for each individual sample according to the results of k-means clustering. High intensity points represent areas with high melanin content, a potent endogenous photoacoustic absorber. The border between the two clusters is left unlabelled and it is where the classification will be the most relevant.
+    The training data for the convolutional neural network is systematically collected for each individual sample according to the results of k-means clustering. High intensity points represent areas with high melanin content, a potent endogenous photoacoustic absorber. The border between the two clusters is left unlabelled and it is where the classification is the most relevant.
     """
-
-    if st.toggle(f'Slice with the largest non-healthy labelled cluster', key=99):   # set to toggle deepest point
-        s = np.argmax(thickness)
-    else:     
-        s = st.slider("Sample's cross-section:", 0, 36, key=98, value=10)
+    s = st.slider("Sample's cross-section:", 0, 36, key=98, value=10)
 
 # load some data
 

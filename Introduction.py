@@ -65,6 +65,7 @@ if run or pre:
     pai, us = load_raw_data(s)
 
 if run:  
+    st.write(pai.shape)
     plot_pai_us(pai, us, s, w)
 
 if pre:

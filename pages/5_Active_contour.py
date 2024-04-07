@@ -27,9 +27,9 @@ with cols_[1]:
 if run == True:
     st.video(pre_path + 'active_contour.mp4')
 
-tryit = st.toggle(f'Try it yourself!', key=51)
-cols_ = st.columns([3, 1])
+    tryit = st.toggle(f'Try it yourself!', key=51)
+    cols_ = st.columns([3, 1])
 
-with cols_[1]:
-    if tryit == True:
-        st.image('./data/qr.png')
+    with cols_[1]:
+        if tryit == True:
+            st.image('./data/qr.png')

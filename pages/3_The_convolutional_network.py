@@ -50,7 +50,9 @@ with cols[1]:
     plt.legend(markerscale=15)
     if t_coord.size == 0:
         with cols[0]:
-            st.markdown(':red[Only healthy pixels here, try changing slice!]')
+            sub_cols = st.columns([1, 6, 1])
+            with sub_cols[1]:
+                st.markdown(':red[Only healthy pixels here, try changing slice!]')
             st.write('#')
     else:
         with cols[0]:
@@ -70,4 +72,4 @@ with cols[0]:
     plt.ylabel('Thickness [mm]')
     st.pyplot(fig, use_container_width=True)
 
-    st.subheader(f'Largest melanomas thickness: :red[**{round(max(thickness),2)} mm**, slice 20]')
+    st.subheader(f'Final melanoma thickness: :red[**{round(max(thickness),2)} mm**], slice 20')

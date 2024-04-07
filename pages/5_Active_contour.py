@@ -37,6 +37,7 @@ if run == True:
         pai_ready = np.load(pre_path + 'pai_ready_reduced_20.npy')
         t = np.load(pre_path + 'tumour_area.npy')
         pai_ready = repeat_values(pai_ready)
+        st.write(pai_ready.shape)
         fig, ax = plt.subplots(figsize=(5, 6))
         plt.axis('off')
         plt.imshow(pai_ready[:, :, 0]/pai_ready[:, :, 0].max(), cmap='gray', norm=LogNorm(clip=True), aspect='auto') 

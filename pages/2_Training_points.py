@@ -59,8 +59,6 @@ def plot_pai_us(pai, us, s, w, pai_log=True):
     plt.ylabel('Photoacoustic intensity [a.u.]')
     st.pyplot(fig, use_container_width=True)
 
-with cols[0]:
-    plot_pai_us(pai_ready, pai_ready, s, 0, pai_log=True)
 
 with cols[1]:
     fig, ax = plt.subplots(figsize=(5, 6))
@@ -73,5 +71,9 @@ with cols[1]:
     markers = [plt.Line2D([0,0],[0,0],color=color, marker='o', linestyle='') for color in ['orangered', 'darkgreen']]
     plt.legend(markers, ['Non-healthy cluster', 'Healthy cluster'], numpoints=1, loc='upper right', markerscale=1)
     if t_coord.size == 0:
-        st.write('##### No non-healthy pixels here, try changing slice!')
+        with cols[0]:
+            st.write('##### No non-healthy pixels here, try changing slice!')
     st.pyplot(fig, use_container_width=True)
+
+with cols[0]:
+    plot_pai_us(pai_ready, pai_ready, s, 0, pai_log=True)

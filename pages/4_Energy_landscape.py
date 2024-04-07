@@ -49,18 +49,18 @@ with cols_[1]:
 cols = st.columns([1, 1])
 
 with cols[0]:
-    st.write('#***Sinks initialisation***')
+    st.write('*** Sinks initialisation***')
     fig_i, ax = plot_2d(sand_init)
     st.pyplot(fig_i, use_container_width=True)
 
 with cols[1]:
     if run == True:
-        st.write('#***Final sandpiles***')
+        st.write('*** Final sandpiles***')
         fig_f, ax = plot_2d(sand_final)
         st.pyplot(fig_f, use_container_width=True)
 
 if run == True:
-    st.write('***3D view of the final sandpiles***')
+    st.write('*** - 3D view of the final sandpiles -***')
 
     sand_2 = np.load(pre_path + 'sand_castle_final.npy')
     sand_2[sand_2 < -40] = -15

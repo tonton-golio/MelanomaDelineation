@@ -24,8 +24,14 @@ with cols_[1]:
     st.write('#')
     run = st.toggle(f'RUN', key=41)
 
+colls = st.columns([2, 1])
+
 if run == True:
-    st.video(pre_path + 'active_contour.mp4')
+    with colls[0]:
+        st.video(pre_path + 'active_contour.mp4')
+
+    with colls[1]:
+        st.write('#')
 
     tryit = st.toggle(f'Try it yourself!', key=51)
     cols_ = st.columns([3, 1])

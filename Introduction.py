@@ -18,9 +18,15 @@ def plot_pai_us(pai, us, s, w):
 # Title
 st.set_page_config(layout="wide")
 st.title('Your melanoma analysis framework')
-"""
-This webapp presents a clearer overview of the processing framework step by step, allowing the user to interact with the sample and fully understand my algorithm.
-"""
+
+ccols = st.columns([3, 1])
+
+with ccols[0]:
+    """
+    This webapp presents a clearer overview of the processing framework step by step, allowing the user to interact with the sample and fully understand my algorithm.
+    """
+with ccols[1]:
+    st.image('./data/set-up.png')
 
 with st.sidebar:
     "Select a sample to process and find out how deep is the tumour!"

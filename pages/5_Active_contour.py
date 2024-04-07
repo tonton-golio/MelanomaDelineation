@@ -37,11 +37,10 @@ if run == True:
         pai_ready = np.load(pre_path + 'pai_ready_reduced_20.npy')
         t = np.load(pre_path + 'tumour_area.npy')
         pai_ready = repeat_values(pai_ready)
-        st.write(pai_ready.shape)
         fig, ax = plt.subplots(figsize=(5, 6))
         plt.axis('off')
         plt.imshow(pai_ready[:, :, 0]/pai_ready[:, :, 0].max(), cmap='gray', norm=LogNorm(clip=True), aspect='auto') 
-        plt.scatter(t[:, 1], t[:, 0], s = 0.5, color = 'orangered')
+        plt.scatter(t[:, 1]//2, t[:, 0]//2, s = 0.5, color = 'orangered')
         st.pyplot(fig, use_container_width=True)
 
     tryit = st.toggle(f'Try it yourself!', key=51)

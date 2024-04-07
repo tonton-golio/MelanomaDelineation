@@ -28,7 +28,7 @@ sand_init, sand_final = load_sand()
 @st.cache_data
 def plot_2d(sand):
     fig, ax = plt.subplots()
-    sand[np.logical_and(sand > -100, sand < -5)] = -30  
+    sand[np.logical_and(sand > -100, sand < -5)] = -80  
     plt.imshow(sand, cmap='Greys_r')
     plt.axis('off')
     plt.colorbar()

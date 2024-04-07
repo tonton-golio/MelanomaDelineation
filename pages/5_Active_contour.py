@@ -21,7 +21,10 @@ st.divider()
 cols_ = st.columns([4, 1])
 
 with cols_[0]:
-    st.write('The contour moves to minimise a weighted sum of energies: gravitational pull from the center of mass, stifness and homogeneousity of the contour and finally our sandpiles results.')
+    '''This contour moves its position to minimise a weighted sum of energies: 
+    ***gravitational pull*** from the center of mass, ***stifness*** and ***homogeneousity*** 
+    of the contour and finally our ***sandpiles*** results. It allows to segment the tumour area 
+    and provide the doctors with a clean outline for removal.'''
 
 with cols_[1]:
     st.write('#')

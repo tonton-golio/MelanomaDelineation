@@ -64,7 +64,7 @@ if run == True:
     y = np.arange(sand_2.shape[0])
     X, Y = np.meshgrid(x, y)
 
-    heatmap = go.Surface(x=X, y=Y, z=sand_2, colorscale='magma')
+    heatmap = go.Surface(x=X, y=Y, z=sand_2, colorscale='Greys')
 
     layout = go.Layout(
         scene=dict(

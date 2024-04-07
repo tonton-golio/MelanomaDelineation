@@ -23,10 +23,8 @@ st.divider()
 cols = st.columns([1, 1])
 thickness = np.load(pre_path + f'thickness.npy')
 with cols[0]:
-    """
-    This page shows how the training data for the neural network are systematically obtained from each individual sample.
-    Given the absence of a ground truth, the data are labelled according to the results of k-means clustering.
-    A thin border between the two clusters is left unlabelled due to the lack of ground truth data about the tumour outline.
+    """ 
+    The training data for the convolutional neural network is systematically collected for each individual sample according to the results of k-means clustering. High intensity points represent areas with high melanin content, a potent endogenous photoacoustic absorber. The border between the two clusters is left unlabelled and it is where the classification will be the most relevant.
     """
 
     if st.toggle(f'Slice with the largest non-healthy labelled cluster', key=99):   # set to toggle deepest point

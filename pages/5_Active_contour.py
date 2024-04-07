@@ -55,11 +55,11 @@ if run == True:
     tryit = st.toggle(f'Try it yourself!', key=51)
 
 with cols_[1]:
-
-    if tryit == True:
-        st.write('#')
-        st.write('#')
-        st.write('#')
-        st.write('#')
-        st.image('./data/qr.png')
-        st.markdown('Scan the QR code or type on your web browser \n ***tumourdetector.streamlit.app*** to try it yourself!')
+    if run == True:
+        if tryit == True:
+            st.write('#')
+            st.write('#')
+            st.write('#')
+            st.write('#')
+            st.image('./data/qr.png')
+            st.markdown('Scan the QR code or type on your web browser \n ***tumourdetector.streamlit.app*** to try it yourself!')

@@ -23,7 +23,9 @@ ccols = st.columns([3, 1])
 with ccols[0]:
     st.title('Automatic delineation framework for melanoma detection')
     """
-    In this webapp you find an overview of the full algorithm I developed to determine tumour thickness and outline from phoacoustic imaging data of melanomas. Step by step, you can explore the algorithm results on the sample and interact with the algorithm's parameters.
+    In this webapp you find an overview of the full algorithm I developed to determine tumour thickness\n
+    and outline from phoacoustic imaging data of melanomas. Step by step, you can explore the algorithm\n
+    results on the sample and interact with the algorithm's parameters.
     """
 with ccols[1]:
     st.image('./data/setup.png')

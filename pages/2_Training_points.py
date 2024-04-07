@@ -66,7 +66,6 @@ def plot_pai_us(pai, us, s, w, pai_log=True):
     st.pyplot(fig, use_container_width=True)
 
 with cols[0]:
-    pass
     plot_pai_us(pai_ready, pai_ready, s, 0, pai_log=True)
 
 with cols[1]:

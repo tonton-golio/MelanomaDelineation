@@ -72,7 +72,7 @@ with cols[1]:
     plt.legend(markers, ['Non-healthy cluster', 'Healthy cluster'], numpoints=1, loc='upper right', markerscale=1)
     if t_coord.size == 0:
         with cols[0]:
-            st.markdown(:red['##### No non-healthy pixels here, try changing slice!'])
+            st.markdown(':red[##### No non-healthy pixels here, try changing slice!'])
             st.write('#')
     st.pyplot(fig, use_container_width=True)
 

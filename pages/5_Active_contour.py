@@ -51,10 +51,8 @@ if run == True:
         st.pyplot(fig, use_container_width=True)
 
     cols_ = st.columns([2, 1])
-
-st.write('#')
-
-tryit = st.toggle(f'Try it yourself!', key=51)
+    st.write('#')
+    tryit = st.toggle(f'Try it yourself!', key=51)
 
 with cols_[1]:
 

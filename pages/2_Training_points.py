@@ -24,7 +24,11 @@ cols = st.columns([1, 1])
 thickness = np.load(pre_path + f'thickness.npy')
 with cols[0]:
     """ 
-    The training data for the convolutional neural network is systematically collected for each individual sample according to the results of k-means clustering. High intensity points represent areas with high melanin content, a potent endogenous photoacoustic absorber. The border between the two clusters is left unlabelled and it is where the classification is the most relevant.
+    The training data for the convolutional neural network is systematically collected for each individual 
+    sample trough k-means clustering. High intensity spectra indicate points with high 
+    melanin content, a potent endogenous photoacoustic absorber. These are labelled unhealthy, while everything else
+    is labelled healthy. A border between the two clusters is left 
+    unlabelled and it is where classification is relevant.
     """
     s = st.slider("Slice:", 0, 36, key=98, value=10)
 
@@ -47,7 +51,7 @@ def plot_pai_us(pai, us, s, w, pai_log=True):
 
     fig, ax = plt.subplots(figsize=(5,2))
     plt.grid()
-    plt.title('Average spectra of visualised training points')
+    plt.title('Average spectra of training points in this slice')
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)   
     

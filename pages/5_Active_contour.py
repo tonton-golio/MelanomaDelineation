@@ -5,9 +5,22 @@ from matplotlib.colors import LogNorm
 from tqdm import tqdm
 import time
 
+@st.cache_data
 def repeat_values(x_reduced, repeat_factor=4):
     return np.repeat(np.repeat(x_reduced, repeats=repeat_factor, axis=0), repeats=repeat_factor, axis=1)
-    
+
+@st.cache_data
+def plot_tumour_area()
+    pai_ready = np.load(pre_path + 'pai_ready_reduced_20.npy')
+    t = np.load(pre_path + 'tumour_area.npy')
+    pai_ready = repeat_values(pai_ready)
+    fig, ax = plt.subplots(figsize=(5, 6))
+    plt.axis('off')
+    st.write('***Final tumour ouline for this slice***')
+    plt.imshow(pai_ready[:, :, 0]/pai_ready[:, :, 0].max(), cmap='gray', norm=LogNorm(clip=True), aspect='auto') 
+    plt.scatter(t[:, 1]//2, t[:, 0]//2, s = 0.5, color = 'orangered')
+    st.pyplot(fig, use_container_width=True)
+
 # path stuff
 data_path = "./data/"
 sample_path = data_path + "your_sample/"
@@ -41,15 +54,7 @@ if run == True:
 
     with colls[1]:
         time.sleep(6)
-        pai_ready = np.load(pre_path + 'pai_ready_reduced_20.npy')
-        t = np.load(pre_path + 'tumour_area.npy')
-        pai_ready = repeat_values(pai_ready)
-        fig, ax = plt.subplots(figsize=(5, 6))
-        plt.axis('off')
-        st.write('***Final tumour ouline for this slice***')
-        plt.imshow(pai_ready[:, :, 0]/pai_ready[:, :, 0].max(), cmap='gray', norm=LogNorm(clip=True), aspect='auto') 
-        plt.scatter(t[:, 1]//2, t[:, 0]//2, s = 0.5, color = 'orangered')
-        st.pyplot(fig, use_container_width=True)
+        plot_tumour_area()
 
     cols_ = st.columns([2, 1])
     st.write('#')

@@ -5,7 +5,7 @@ from scipy import signal
     
 data_path = "./data/"
 sample_path = data_path + "your_sample/"
-pre_path = "./data/pre_run/"
+pre_path = data_path + "pre_run/"
 
 @st.cache_data
 def repeat_values(x_reduced, repeat_factor=4):

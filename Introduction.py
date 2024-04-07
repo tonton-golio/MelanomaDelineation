@@ -43,16 +43,16 @@ with cols[1]:
     pre = st.toggle("Pre-process data", key=4) 
 
 if run or pre:
-    pai = np.load(path + f"pai_reduced_{s}.npy")
+    pai = np.load(pre_path + f"pai_reduced_{s}.npy")
     pai = repeat_values(pai)
-    us = np.load(path + f"us_{s}.npy")
+    us = np.load(pre_path + f"us_{s}.npy")
 
 if run:  
     plot_pai_us(pai, us, s, w)
 
 if pre:
-    pai_ready = np.load(path + f"pai_ready_reduced_{s}.npy")
+    pai_ready = np.load(pre_path + f"pai_ready_reduced_{s}.npy")
     pai_ready = repeat_values(pai_ready)
-    us_ready = np.load(path + f"us_ready_{s}.npy")
+    us_ready = np.load(pre_path + f"us_ready_{s}.npy")
     st.success('Data has been processed.')
     plot_pai_us(pai_ready, us_ready, s, w)    

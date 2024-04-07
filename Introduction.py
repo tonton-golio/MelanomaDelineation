@@ -23,7 +23,7 @@ st.set_page_config(layout="wide")
 ccols = st.columns([3, 1])
 
 with ccols[0]:
-    st.title('Automatic AI framework for melanoma delineation')
+    st.title('Automatic AI framework for \n melanoma delineation')
     """
     In this webapp you find an overview of the full algorithm I developed to determine tumour thickness\n
     and outline from phoacoustic imaging data of melanomas. Step by step, you can explore the algorithm\n

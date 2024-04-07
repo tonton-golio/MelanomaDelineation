@@ -27,7 +27,8 @@ sand_init, sand_final = load_sand()
 
 @st.cache_data
 def plot_2d(sand):
-    fig, ax = plt.subplots()  
+    fig, ax = plt.subplots()
+    sand[sand < 0] = -40  
     plt.imshow(sand, cmap='Greys_r')
     plt.axis('off')
     plt.colorbar()

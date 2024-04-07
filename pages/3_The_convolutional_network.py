@@ -70,4 +70,4 @@ with cols[0]:
     plt.ylabel('Thickness [mm]')
     st.pyplot(fig, use_container_width=True)
 
-    st.subheader('Melanomas thickness: :red[**{round(max(thickness),2)} mm**])
+    st.subheader(f'Melanomas thickness: :red[**{round(max(thickness),2)} mm**]')

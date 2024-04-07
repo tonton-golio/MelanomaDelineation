@@ -24,7 +24,7 @@ with cols_[1]:
     st.write('#')
     run = st.toggle(f'RUN', key=41)
 
-file = open(pre_path, 'rb')
+file = open(pre_path + 'animation.gif', 'rb')
 contents = file.read()
 data_url = base64.b64encode(contents).decode('utf-8-sig')
 file.close()

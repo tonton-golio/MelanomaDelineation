@@ -31,7 +31,16 @@ colls = st.columns([2, 1])
 
 if run == True:
     with colls[0]:
+        file_ = open(pre_path + 'active_contour.gif', "rb")
+        contents = file_.read()
+        data_url = base64.b64encode(contents).decode("utf-8")
+        file_.close()
         st.image(pre_path + 'active_contour.gif')
+
+        st.markdown(
+            f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
+            unsafe_allow_html=True,
+        )
 
     with colls[1]:
         pai_ready = np.load(pre_path + 'pai_ready_reduced_20.npy')

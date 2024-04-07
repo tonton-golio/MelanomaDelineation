@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import LogNorm
 
+@st.cache_data
 def repeat_values(x_reduced, repeat_factor=4):
     return np.repeat(np.repeat(x_reduced, repeats=repeat_factor, axis=0), repeats=repeat_factor, axis=1)
     
@@ -44,13 +45,14 @@ t_coord = load_coord(s, 'tumour')
 h_coord = load_coord(s, 'healthy')
 
 # compute average spectra
+@st.cache_data
 def average_spectra(s, pai_ready, t_coord, h_coord):
     wavelengths = np.linspace(670, 960, 59)  
     t_spectra = np.average(pai_ready[t_coord[:,1], t_coord[:,2]], axis = 0)
     h_spectra = np.average(pai_ready[h_coord[:,1], h_coord[:,2]], axis = 0)
     return wavelengths, t_spectra, h_spectra
 
-
+@st.cache_data
 def plot_pai_us(pai, us, s, w, pai_log=True):
     wavelengths, t_spectra, h_spectra = average_spectra(s, pai_ready, t_coord, h_coord)
 

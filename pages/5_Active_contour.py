@@ -50,7 +50,7 @@ if run == True:
         plt.scatter(t[:, 1]//2, t[:, 0]//2, s = 0.5, color = 'orangered')
         st.pyplot(fig, use_container_width=True)
 
-    tryit = st.toggle(f'Try it yourself!', key=51)
+    tryit = st.toggle(f'Scan the QR code or type ***tumourdetector.streamlit.app*** to try it yourself!', key=51)
     cols_ = st.columns([2, 1])
 
     with cols_[1]:

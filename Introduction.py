@@ -23,7 +23,7 @@ ccols = st.columns([3, 1])
 
 with ccols[0]:
     """
-    In this webapp you will find an overview of the full algorithm step by step, allowing the user to interact with the sample and tweak the algorithm's parameters.
+    In this webapp you will find an overview of the full algorithm I developed to analyse phoacoustic imaging data and determine tumour thickness and outline. Step by step, you can explore the sample and interact the algorithm's parameters.
     """
 with ccols[1]:
     st.image('./data/setup.png')

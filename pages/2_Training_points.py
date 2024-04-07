@@ -10,7 +10,6 @@ def repeat_values(x_reduced, repeat_factor=4):
 # path stuff
 data_path = "./data/"
 sample_path = data_path + "your_sample/"
-training_path = data_path + "training_data/"
 pre_path = "./data/pre_run/"
 
 @st.cache_data

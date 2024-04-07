@@ -43,16 +43,15 @@ with cols[1]:
 
 if run or pre:
     pai = np.load(pre_path + f"pai_reduced_{s}.npy")
-    pai = repeat_values(pai)
-    st.write(pai[:, :, 0])
+    pai_r = repeat_values(pai)
     us = np.load(pre_path + f"us_{s}.npy")
 
 if run:  
-    plot_pai_us(pai, us, s, w)
+    plot_pai_us(pai_r, us, s, w)
 
 if pre:
     pai_ready = np.load(pre_path + f"pai_ready_reduced_{s}.npy")
-    pai_ready = repeat_values(pai_ready)
+    pai_ready_r = repeat_values(pai_ready)
     us_ready = np.load(pre_path + f"us_ready_{s}.npy")
     st.success('Data has been processed.')
-    plot_pai_us(pai_ready, us_ready, s, w)    
+    plot_pai_us(pai_ready_r, us_ready, s, w)    

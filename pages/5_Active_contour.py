@@ -34,7 +34,7 @@ if run == True:
         st.video(pre_path + 'active_contour.mp4', loop = True)
 
     with colls[1]:
-        pai_ready = np.load(pre_path + f'pai_ready_reduced_{s}.npy')
+        pai_ready = np.load(pre_path + 'pai_ready_reduced_20.npy')
         t = np.load(pre_path + 'tumour_area.npy')
         pai_ready = repeat_values(pai_ready)
         fig, ax = plt.subplots(figsize=(5, 6))

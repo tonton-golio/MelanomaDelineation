@@ -78,6 +78,10 @@ with cols[1]:
         with cols[0]:
             st.markdown(':red[Only healthy pixels here, try changing slice!]')
             st.write('#')
+    else:
+        with cols[0]:
+            st.write('#')
+            st.write('#')
     st.pyplot(fig, use_container_width=True)
 
 with cols[0]:

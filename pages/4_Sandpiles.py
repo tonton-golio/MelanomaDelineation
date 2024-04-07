@@ -28,7 +28,7 @@ sand_init, sand_final = load_sand()
 @st.cache_data
 def plot_2d(sand):
     fig, ax = plt.subplots()  
-    plt.imshow(sand, cmap='plasma')
+    plt.imshow(sand, cmap='inferno')
     plt.axis('off')
     plt.colorbar()
     return fig, ax
@@ -64,7 +64,7 @@ if run == True:
     y = np.arange(sand_2.shape[0])
     X, Y = np.meshgrid(x, y)
 
-    heatmap = go.Surface(x=X, y=Y, z=sand_2, colorscale='plasma')
+    heatmap = go.Surface(x=X, y=Y, z=sand_2, colorscale='inferno')
 
     layout = go.Layout(
         scene=dict(

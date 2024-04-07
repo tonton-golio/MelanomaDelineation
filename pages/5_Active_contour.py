@@ -22,7 +22,12 @@ with cols_[0]:
 
 with cols_[1]:
     st.write('#')
-    if st.toggle(f'RUN', key=41):
-        st.video(pre_path + 'active_contour.mp4')
+    run = st.toggle(f'RUN', key=41):
 
-st.image('./data/qr.png')
+if run == True:
+    st.video(pre_path + 'active_contour.mp4')
+
+cols_ = st.columns([4, 1])
+
+with cols_[1]:
+    st.image('./data/qr.png')

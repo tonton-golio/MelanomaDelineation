@@ -25,6 +25,7 @@ s = 20
 # load some data
 sand_init, sand_final = load_sand()
 
+@st.cache_data
 def plot_2d(sand):
     fig, ax = plt.subplots()  
     plt.imshow(sand, cmap='gray')

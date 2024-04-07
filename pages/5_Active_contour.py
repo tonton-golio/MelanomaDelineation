@@ -24,6 +24,6 @@ with cols_[1]:
     st.write('#')
     run = st.toggle(f'RUN', key=41)
 
-st.video(pre_path + 'animation.gif')
+st.video(pre_path + 'active_contour.mp4')
 
 st.image('./data/qr.png')

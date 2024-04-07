@@ -28,7 +28,7 @@ sand_init, sand_final = load_sand()
 @st.cache_data
 def plot_2d(sand):
     fig, ax = plt.subplots()  
-    plt.imshow(sand, cmap='magma')
+    plt.imshow(sand, cmap='Greys')
     plt.axis('off')
     plt.colorbar()
     return fig, ax

@@ -44,8 +44,9 @@ h_coord = load_coord(s, 'healthy')
 # compute average spectra
 def average_spectra(s, pai_ready, t_coord, h_coord):
     wavelengths = np.linspace(670, 960, 59)  
-    t_spectra = np.average(pai_ready[t_coord[:,1], t_coord[:,2]], axis = 0)
     h_spectra = np.average(pai_ready[h_coord[:,1], h_coord[:,2]], axis = 0)
+    if t_coord.size != 0:
+            t_spectra = np.average(pai_ready[t_coord[:,1], t_coord[:,2]], axis = 0)
     return wavelengths, t_spectra, h_spectra
 
 def plot_pai_us(pai, us, s, w, pai_log=True):

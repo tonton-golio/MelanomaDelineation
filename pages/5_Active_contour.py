@@ -22,7 +22,7 @@ cols_ = st.columns([4, 1])
 
 with cols_[0]:
     '''This contour moves its position to minimise a weighted sum of energies: 
-    ***gravitational pull*** from the center of mass, ***stifness*** and ***homogeneousity*** 
+    ***gravitational pull*** from the center of mass, ***stiffness*** and ***homogeneousity*** 
     of the contour and finally our ***sandpiles*** results. It allows to segment the tumour area 
     and provide the doctors with a clean outline for removal. Click on the RUN button to start the algorithm
     on the same slice we generated the energy landscape on.'''

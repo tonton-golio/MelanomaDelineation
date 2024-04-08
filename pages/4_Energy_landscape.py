@@ -10,7 +10,6 @@ data_path = "./data/"
 sample_path = data_path + "your_sample/"
 pre_path = "./data/pre_run/"
 
-@st.cache_data
 def load_sand():
     sand_init = np.load(pre_path + "sand_castle_init.npy")
     sand_final = np.load(pre_path + "sand_castle_final.npy")
@@ -25,7 +24,6 @@ s = 20
 # load some data
 sand_init, sand_final = load_sand()
 
-@st.cache_data
 def plot_2d(sand):
     fig, ax = plt.subplots()
     sand[np.logical_and(sand > -100, sand < -5)] = -80  

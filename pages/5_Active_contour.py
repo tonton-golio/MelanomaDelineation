@@ -5,11 +5,9 @@ from matplotlib.colors import LogNorm
 from tqdm import tqdm
 import time
 
-@st.cache_data
 def repeat_values(x_reduced, repeat_factor=4):
     return np.repeat(np.repeat(x_reduced, repeats=repeat_factor, axis=0), repeats=repeat_factor, axis=1)
 
-@st.cache_data
 def plot_tumour_area():
     pai_ready = np.load(pre_path + 'pai_ready_reduced_20.npy')
     t = np.load(pre_path + 'tumour_area.npy')
